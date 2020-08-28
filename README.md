@@ -15,6 +15,6 @@ Once it is created, To run this new project
 ng serve
 
 Hit the below given URL to display the project in the browser,
-http://localhost:4420
+http://localhost:4200
 
 
