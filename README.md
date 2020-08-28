@@ -18,3 +18,6 @@ Hit the below given URL to display the project in the browser,
 http://localhost:4200
 
 
+To create a new component under the project,
+ng generate component HelloWorld
+
