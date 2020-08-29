@@ -1,0 +1,20 @@
+<table border=1>
+    <caption>List of Books</caption>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Description</th>
+            <th>Sold</th>
+            <th>Published Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let book of books">
+            <td>{{book.id}}</td>
+            <td>{{book.description}}</td>
+            <td>{{book.sold}}</td>
+            <!-- | pipe symbol used to format -->
+            <td>{{book.publishedDate | date | uppercase}}</td>
+        </tr>
+    </tbody>
+</table>
