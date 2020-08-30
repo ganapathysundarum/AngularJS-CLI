@@ -4,4 +4,9 @@
     <h1>Welcome {{name}}</h1>
     List the books available <a routerLink="/books">now</a>
 </div>
+<div class="container"> 
+    IFSC Code <input type="text" name="ifsc" [(ngModel)]="ifscCode"><br>
+    <button (click)="getIFSC()" class="btn btn-success">Show IFSC</button>
+</div>
+
 </div>
