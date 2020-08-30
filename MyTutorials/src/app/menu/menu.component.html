@@ -1,0 +1,24 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div>
+            <a href="#" class="navbar-brand">Book Application</a>
+        </div>
+        <ul class="navbar-nav">
+            <li *ngIf="hardcodedAuthenticationService.isUserAuthticated()">
+                <a routerLink="/hello/Ganapathi" class="nav-link">Home</a>
+            </li>
+            <li *ngIf="hardcodedAuthenticationService.isUserAuthticated()">
+                <a routerLink="/books" class="nav-link">Books</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li *ngIf="!hardcodedAuthenticationService.isUserAuthticated()">
+                <a routerLink="/login" class="nav-link">Login</a>
+            </li>
+            <li *ngIf="hardcodedAuthenticationService.isUserAuthticated()">
+                <a routerLink="/logout" class="nav-link">Logout</a>
+            </li>
+        </ul>
+    </nav>
+
+</header>

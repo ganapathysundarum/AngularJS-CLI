@@ -8,6 +8,9 @@ import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { LoginComponent } from './login/login.component';
 import { ErrorComponent } from './error/error.component';
 import { BooksComponent } from './books/books.component';
+import { MenuComponent } from './menu/menu.component';
+import { FooterComponent } from './footer/footer.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { BooksComponent } from './books/books.component';
     HelloWorldComponent,
     LoginComponent,
     ErrorComponent,
-    BooksComponent
+    BooksComponent,
+    MenuComponent,
+    FooterComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
