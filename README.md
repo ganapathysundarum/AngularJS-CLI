@@ -23,5 +23,5 @@ ng new Hello World
 
 
 ### To create a new service under the project,
-> This service is a common one for entire application.
-##### ng generate service hardcodedAuthenticate
+> This service is a common one for entire application. it could be created in seperate folder "services" like mentioned below,
+##### ng generate service services/hardcodedAuthenticate
