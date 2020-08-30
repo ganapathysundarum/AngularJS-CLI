@@ -21,3 +21,7 @@ ng new Hello World
 ### To create a new component under the project,
 **ng generate component HelloWorld**
 
+
+### To create a new service under the project,
+> This service is a common one for entire application.
+ng generate service hardcodedAuthenticate
