@@ -11,16 +11,34 @@ export class IfscCLientService {
 
   getIFSCService(ifscCode){
     let url = 'https://ifsc.razorpay.com/'+ifscCode
-    this.httpClient.get(url).subscribe(
-      response => this.handleSuccessfullResponse(response)
-    );
-    console.log(this.httpClient.get(url));
-    //console.log("getIFSC method called "+ifscCode)
-  }
+    return this.httpClient.get<IfscBean>(url);   
+  } 
 
-  handleSuccessfullResponse(response){
-    console.log(response);
-  }
-
+  getIFSCServicePathVariable(ifscCode){
+    let url = `https://ifsc.razorpay.com/${ifscCode}`
+    return this.httpClient.get<IfscBean>(url);   
+  } 
 
 }
+
+export class IfscBean{
+  constructor(public BANK : string,
+    public BANKCODE : string,
+    public BRANCH : string,        
+    public STATE : string,
+    public ADDRESS : string,
+    public CENTRE : string,
+    public CITY : string,
+    public CONTACT : string,
+    public DISTRICT : string,
+    public IFSC : string,
+    public IMPS : string,
+    public MICR : string,
+    public MICRCODE : string,
+    public NEFT : string,
+    public RTGS : string,    
+    public STDCODE : string,
+    public UPI : string){
+  }
+}
+

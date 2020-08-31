@@ -1,12 +1,67 @@
-
 <div class="container">
-<div>    
-    <h1>Welcome {{name}}</h1>
-    List the books available <a routerLink="/books">now</a>
-</div>
-<div class="container"> 
-    IFSC Code <input type="text" name="ifsc" [(ngModel)]="ifscCode"><br>
-    <button (click)="getIFSC()" class="btn btn-success">Show IFSC</button>
-</div>
+    <div>
+        <h1>Welcome {{name}}</h1>
+        List the books available <a routerLink="/books">now</a>
+    </div>
+    <div class="container">
+        IFSC Code <input type="text" name="ifsc" [(ngModel)]="ifscCode"><br>
+        <button (click)="getIFSC()" class="btn btn-success">Show IFSC</button>
+    </div>
+
+    <div *ngIf="responseBody">
+        <h3>Ifsc Code Details</h3>
+        <div class="container table-responsive">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>BANK</th>
+                        <th>BANKCODE</th>
+                        <th>BRANCH</th>
+                        <th>CENTRE</th>
+                        <th>DISTRICT</th>
+                        <th>STATE</th>
+                        <th>ADDRESS</th>
+                        <th>CENTRE</th>
+                        <th>CITY</th>
+                        <th>CONTACT</th>
+                        <th>DISTRICT</th>
+                        <th>IFSC</th>
+                        <th>IMPS</th>
+                        <th>MICR</th>
+                        <th>MICR CODE</th>
+                        <th>NEFT</th>
+                        <th>RTGS</th>
+                        <th>STATE</th>
+                        <th>STD CODE</th>
+                        <th>UPI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{responseBody.BANK}}</td>
+                        <td>{{responseBody.BANKCODE}}</td>
+                        <td>{{responseBody.BRANCH}}</td>
+                        <td>{{responseBody.CENTRE}}</td>
+                        <td>{{responseBody.DISTRICT}}</td>
+                        <td>{{responseBody.STATE}}</td>
+                        <td>{{responseBody.ADDRESS}}</td>
+                        <td>{{responseBody.CENTRE}}</td>
+                        <td>{{responseBody.CITY}}</td>
+                        <td>{{responseBody.CONTACT}}</td>
+                        <td>{{responseBody.DISTRICT}}</td>
+                        <td>{{responseBody.IFSC}}</td>
+                        <td>{{responseBody.IMPS}}</td>
+                        <td>{{responseBody.MICR}}</td>
+                        <td>{{responseBody.MICRCODE}}</td>
+                        <td>{{responseBody.NEFT}}</td>
+                        <td>{{responseBody.RTGS}}</td>
+                        <td>{{responseBody.STATE}}</td>
+                        <td>{{responseBody.STDCODE}}</td>
+                        <td>{{responseBody.UPI}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 </div>

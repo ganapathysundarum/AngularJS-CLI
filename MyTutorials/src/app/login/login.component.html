@@ -1,12 +1,28 @@
 <h1>Login to Book App</h1>
 <div class="container">
-<div class="alert alert-warning" *ngIf='isValidLogin'>{{errorMessage}}</div>
-<div>
-User Name : <input type="text" name="username" [(ngModel)]="username">
-Password  : <input type="password" name="password" [(ngModel)]="password">
-
-<!-- Give user name: {{username}} -->
-
-<button (click)=handleLogin() class="btn btn-success">Login</button>
-</div>
+    <div class="alert alert-warning" *ngIf="loginForm.dirty && loginUsername.invalid">
+        Enter valid values in username
+    </div>
+    <div class="alert alert-warning" *ngIf="loginForm.dirty && loginPassword.invalid">
+        Enter valid values in password
+    </div>
+    <div class="alert alert-warning" *ngIf='isValidLogin'>{{errorMessage}}</div>
+    <div>
+        <form (ngSubmit)="!loginForm.invalid && handleLogin()" #loginForm="ngForm">
+            <fieldset class="form-group">
+                <label>User Name :</label>
+                <input type="text" class="form-control" name="username" #loginUsername="ngModel" required="required"
+                    [(ngModel)]="username" minlenth="5">
+            </fieldset>
+            <fieldset class="form-group">
+                <label>Password :</label>
+                <input type="password" class="form-control" name="password" #loginPassword="ngModel"
+                    [(ngModel)]="password" required="required">
+            </fieldset>
+            <!-- Give user name: {{username}} -->
+            <div class="row">
+                <button type="submit" (click)=handleLogin() class="btn btn-success">Login</button>
+            </div>
+        </form>
+    </div>
 </div>
