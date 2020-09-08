@@ -2,7 +2,7 @@
 **npm --version**
 
 ### To Install Angular JS CLI module from NPM
-**ng install -g @angular/CLI**
+**npm install -g @angular/CLI**
 
 ### To check ng version post installed,
 **ng --version**
